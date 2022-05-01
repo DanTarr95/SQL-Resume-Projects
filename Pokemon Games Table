@@ -1,0 +1,15 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, release_year INTEGER);
+
+INSERT INTO store VALUES (1, "Pokemon Red", 5, 40.96, 1996);
+INSERT INTO store VALUES (2, "Pokemon Gold", 6, 20.00, 2000);
+INSERT INTO store VALUES (3, "Pokemon Sapphire", 7, 20.13, 2003);
+INSERT INTO store VALUES (4, "Pokemon Platinum", 8, 20.07, 2009);
+INSERT INTO store VALUES (5, "Pokemon White", 2, 20.11, 2011);
+INSERT INTO store VALUES (6, "Pokemon X", 3, 54.26, 2013);
+INSERT INTO store VALUES (7, "Pokemon Sun", 10, 20.16, 2016);
+INSERT INTO store VALUES (8, "Pokemon Let's Go, Eevee!", 7, 20.18, 2018);
+INSERT INTO store VALUES (9, "Pokemon Sword", 1, 20.19, 2019);
+INSERT INTO store VALUES (10, "Pokemon Legends: Arceus", 10, 20.22, 2022);
+SELECT name, SUM(quantity) FROM store GROUP BY name;
+SELECT * FROM store ORDER BY price;
+SELECT * FROM store; 
